@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <!--img src="assets/images/Logo-Uni.png" alt=""-->
+    <a class="navbar-brand" href="#">BIBLIOTECA ON-LINE UNICAUCA </a>
+    <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="fa fa-bars text-muted" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <!--li class="nav-item dropdown" ngbDropdown>
+                <button class="btn btn-outline-secondary">Mis Prestamos/Reservas</button>
+            </li-->
+            <li class="nav-item dropdown" ngbDropdown>
+                <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                    <i class="fa fa-user"></i> John Smith <b class="caret"></b>&nbsp;&nbsp;
+                </a>
+                <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a class="dropdown-item" [routerLink]="['/login']" (click)="onLoggedout()">
+                        <i class="fa fa-fw fa-power-off"></i> Cerrar Sesion
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
