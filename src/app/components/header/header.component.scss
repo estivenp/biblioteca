@@ -1,0 +1,146 @@
+$topnav-background-color: #222;
+:host {
+    .navbar {
+        background: radial-gradient(circle, rgba(12,130,181,1) 0%, rgba(7,61,120,1) 85%);
+        height: 10%;
+        .navbar-brand {
+            color: #fff;
+            margin: 0%;
+            padding: 0%;
+            width: 7%;
+        }
+        .nav-item > a {
+            color: #999;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .imgLogoUnicauca
+        {
+            //height: 60%;
+            width: 50px;
+            margin-top: 0%;
+            margin-left: 35%;
+            margin-right: 0%;
+            max-height: max-content;
+            display:flex;
+        }
+        .imgNombreUnicauca
+        {
+            height: 30%;
+            width: 80px;
+            margin-top: 0%;
+            margin-left: 0%;
+            opacity: 0.8;
+            display:flex;
+            max-height: max-content;
+        }
+        .txtHeaderTituloSsae{
+            opacity: 0.67;
+            -webkit-text-stroke: 0.3px #707070;
+            font-family: MicrosoftYaHeiUI;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.25;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 8%;
+            margin-left: 90%;
+            display:flex;
+        }
+        .imgLogoSsae
+        {
+            height: 90%;
+            width: 80%;
+            margin-left: 800%;
+            //display:flex;
+            //max-height: max-content;
+        }
+        .txtHeaderSiglasSsae
+        {
+            width: 94px;
+            height: 24px;
+            opacity: 0.83;
+            font-family: manOldStyle;
+            font-size: 44.5px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.16;
+            letter-spacing: normal;
+            color: #dee8de;
+            margin-top: 0;
+            margin-left: 800%;
+            display:flex;
+        }
+        .BanderaUnicauca
+        {
+            
+            height: -webkit-fill-available;
+            width: 90%;
+            margin-left: 34%;
+            max-height: max-content;
+            display:flex;
+        }
+        /*.contenedorHeader
+        {
+            width: 100%;
+            height: 100px;
+            //max-height: max-content;
+        }*/
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+
+    @media (max-width:564px) {
+        .ocultar{
+                display:none!important;
+        }
+        .imgLogoSsae{
+            height: 70px!important;
+            width: 80px!important;
+            margin-left: 0%!important;
+        }
+        .txtHeaderSiglasSsae{
+            margin-left: 600%!important;
+        }
+    }
+    @media (max-width:997px) {
+        .txtHeaderTituloSsae{
+                display:none!important;
+        }
+        .imgNombreUnicauca{
+                margin-left: 20%!important;
+        }
+        .imgLogoSsae{
+            margin-left: 200%!important;
+        }
+        .txtHeaderSiglasSsae{
+            margin-left: 100%!important;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <img class="center" src="assets/images/Icon/Avatar.png" alt="">
+        <label for="" class="nombre">{{nombre}}</label>
+        <a class="list-group-item">
+            <i class="fa fa-list-alt"></i>&nbsp;
+            <span>Catalogo</span>
+        </a>
+        <a class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+            <span>Mis Reservas</span>
+        </a>
+        <button type="button" class="btn btn-sm btn-danger cButton" (click)="onLoggedout()"
+            (click)="onLoggedout()">Salir</button>
+    </div>
+</nav>

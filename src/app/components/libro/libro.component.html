@@ -1,0 +1,20 @@
+<div class="card border-success">
+  <!-- <img class="card-img-top" src="/assets/images/libros/el-castillo.jpg" alt="Card image cap"> -->
+  <img class="card-img-top" [src]="this.libro.imagen" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" id="titulo">{{this.libro.titulo}}</h5>
+    <p class="card-text" id="autor">{{this.libro.autor}}</p>
+  </div>
+  <!--div class="card-footer">
+      <small class="text-muted">Existentes: {{this.libro.uniExistentes}}</small><br>
+      <small class="text-muted">Disponibles: {{this.libro.uniDisponibles}}</small>
+    </div-->
+</div>
+<!-- <div class="card" style="width:500px">
+  <img class="card-img-top" src="/assets/images/libros/el-castillo.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h4 class="card-title">{{this.libro.titulo}}</h4>
+    <p class="card-text">{{this.libro.autor}}</p>
+    <a href="#" class="btn btn-primary">See Profile</a>
+  </div>
+</div> -->
