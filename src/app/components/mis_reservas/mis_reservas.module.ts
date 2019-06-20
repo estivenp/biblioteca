@@ -5,16 +5,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderModule } from '../header/header.module';
 import { SidebarModule } from '../sidebar/sidebar.module';
 
-import { BibliotecaComponent } from './biblioteca.component';
+import { MisReservasComponent } from './mis_reservas.component';
 // import { HeaderComponent } from '../header/header.component';
 // import { SidebarComponent } from '../sidebar/sidebar.component';
-import { BibliotecaRoutingModule } from './biblioteca-routing.module';
+import { MisReservasRoutingModule } from './mis_reservas-routing.module';
 import { LibroModule } from '../libro/libro.module';
-import { BusquedaPipe } from '../../pipes/busqueda';
-import { GerneroPipe } from '../../pipes/genero';
 
 @NgModule({
-    imports: [CommonModule,FormsModule,NgbModule,BibliotecaRoutingModule,HeaderModule,SidebarModule,LibroModule],
-    declarations: [BibliotecaComponent,BusquedaPipe,GerneroPipe]
+    imports: [CommonModule, FormsModule, NgbModule, MisReservasRoutingModule,
+         HeaderModule, SidebarModule, LibroModule],
+    declarations: [MisReservasComponent]
 })
-export class BibliotecaModule {}
+export class MisReservasModule {}

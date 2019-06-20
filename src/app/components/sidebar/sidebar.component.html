@@ -1,12 +1,12 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
     <div class="list-group">
         <img class="center" src="assets/images/Icon/Avatar.png" alt="">
-        <label for="" class="nombre">{{nombre}}</label>
-        <a class="list-group-item">
+        <label for="" class="nombre">Tania Cañizares</label>
+        <a class="list-group-item" [routerLink]="['/biblioteca']" [routerLinkActive]="['router-link-active']">
             <i class="fa fa-list-alt"></i>&nbsp;
             <span>Catalogo</span>
         </a>
-        <a class="list-group-item">
+        <a class="list-group-item" [routerLink]="['/misReservas']" [routerLinkActive]="['router-link-active']">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
             <span>Mis Reservas</span>
         </a>
