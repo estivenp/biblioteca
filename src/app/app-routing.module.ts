@@ -4,8 +4,8 @@ import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 
 const routes: Routes = [
-    { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },
-    { path: 'biblioteca', loadChildren: './components/biblioteca/biblioteca.module#BibliotecaModule' },
+    { path: 'layout', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },
+    { path: '', loadChildren: './components/biblioteca/biblioteca.module#BibliotecaModule' },
     { path: 'misReservas', loadChildren: './components/mis_reservas/mis_reservas.module#MisReservasModule' },
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
