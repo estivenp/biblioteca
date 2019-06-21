@@ -9,7 +9,7 @@ import {Pipe,PipeTransform}from '@angular/core';
 
 export class BusquedaPipe implements PipeTransform
 {
-    public transform ( value , Palabra : number)
+    public transform ( value , Palabra : String)
     {
         if(!value){return;}
         if(!Palabra){return value;}

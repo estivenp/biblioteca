@@ -1,26 +1,22 @@
 <app-header></app-header>
 <app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
-    <form class="form-inline row">
-        <a href="" class="col-md-3"></a>
-        <input [(ngModel)]="search" class="form-control col-md-4 campoBusqueda " type="text" name="search"
-            placeholder="Buscar libro por titulo" aria-label="search" id="search">
-        <button class="btn btn-outline-success " type="submit"><i class="fa fa-search" aria-hidden="true"
-                disabled></i></button>
-    </form>
-    <form class="form-inline row">
-        <a class="col-md-8"></a>
-        <label for="">Filtrar por:</label>
-        <select class="form-control form-control-sm col-md-3" name="filtro" id="filtro" [(ngModel)]="filtro">
-            <option value="0">Seleccione el genero</option>
-            <option *ngFor="let item of generos; let indice = index" value="{{ generos[indice] }}">
-                {{ item }}</option>
-        </select>
-    </form>
-    <br>
-    <div class="row col-xl-12">
-        <div *ngFor="let  libro of libros | genero : filtro | nombre: search;let i=index" class="col-xl-3">
-            <app-libro [libro]=libro class="libros" (click)="informacion(i)"></app-libro>
-        </div>
+
+    <!-- Seccion Para mostrar los libros existentes -->
+    <div *ngIf="_libro.getPagina()==1">
+        <app-listar></app-listar>
     </div>
+
+    <!-- Seccion para ver el detalle del libro -->
+
+    <div *ngIf="_libro.getPagina()==2">
+        <app-detalle></app-detalle>
+    </div>
+
+    <!-- Seccion para mostrar el formulario de reserva -->
+
+    <div *ngIf="_libro.getPagina()==3">
+        <app-reserva></app-reserva>
+    </div>
+
 </section>

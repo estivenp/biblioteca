@@ -1,0 +1,27 @@
+#imagen{
+     width: 70%;
+}
+#resenia{
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: inherit;
+}
+hr{
+    // position: absolute;
+    width: 70px;
+    height: 4px;
+    background-color: #2eca6a;
+    bottom: 20px;
+    left: 0; 
+}
+#descripcion{
+    color: #555555;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Poppins', sans-serif;
+}

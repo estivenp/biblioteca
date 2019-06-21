@@ -1,5 +1,5 @@
 export class Libro {
     constructor
-    (public titulo:String,public autor:String,public genero:String,public numEdicion:number,
-        public uniExistentes:number,public uniDisponibles:number,public resena:String,public imagen:String){}
+    (public ide:String, public titulo:String,public autor:String,public genero:String,public edicion:number,
+        public uni_existente:number,public uni_disponible:number,public descipcion:String,public imagen:String){}
 }
