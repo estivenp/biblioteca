@@ -62,11 +62,6 @@ export class SidebarComponent implements OnInit {
         dom.classList.toggle(this.pushRightClass);
     }
 
-    rltAndLtr() {
-        const dom: any = document.querySelector('body');
-        dom.classList.toggle('rtl');
-    }
-
     onLoggedout() {
         localStorage.removeItem('isLoggedin');
     }

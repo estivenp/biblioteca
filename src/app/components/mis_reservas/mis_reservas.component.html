@@ -2,33 +2,25 @@
 <app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
 
-<!--Tabla de mis resrvas  -->
+    <!--Tabla de mis resrvas  -->
 
     <div class="card-header" style="text-align: center">Reservas</div>
-<table class="card-body table table-hover">
-    <thead>
-        <tr>
-            <th>Nombre Libro</th>
-            <th class="ocultar">Fecha Reserva</th>
-            <th>Fecha Entrega</th>
-            <th class="ocultar">Estado</th>
-            <!-- <th>Accion <p></p> </th> -->
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of reservas; let indice = index">
-            <!-- <td class="ocultar" *ngIf="indice < (paginaActual*10) && indice >= ((paginaActual-1)*10)">{{ indice +1}}</td>
-            <td *ngIf="indice < (paginaActual*10) && indice >= ((paginaActual-1)*10)">{{ item.nombre }}</td>
-            <td class="ocultar" *ngIf="indice < (paginaActual*10) && indice >= ((paginaActual-1)*10)">{{ item.tipo }}</td>
-            <td *ngIf="indice < (paginaActual*10) && indice >= ((paginaActual-1)*10)">{{ item.estado }}</td>
-            <td *ngIf="indice < (paginaActual*10) && indice >= ((paginaActual-1)*10)"><a (click)="informacion(indice)" routerLink="./">Modificar</a></td> -->
-            <td>{{item.nomLibro}}</td>
-            <td class="ocultar">{{item.fechaRes | date:'medium'}}</td>
-            <td>{{item.fechaEnt |date:'medium'}}</td>
-            <td class="ocultar">{{item.estado}}</td>
-        </tr>
-    </tbody>
-</table><br>
-<!-- <ngb-pagination [collectionSize]="totalMaterias" [ellipses]="true" [(page)]="pagina" [maxSize]="5"
-    [boundaryLinks]="true" (pageChange)="cambiarPagina($event)"></ngb-pagination> -->
+    <table class="card-body table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre Libro</th>
+                <th class="ocultar">Fecha Reserva</th>
+                <th>Fecha Entrega</th>
+                <th class="ocultar">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of reservas; let indice = index">
+                <td>{{item.nomLibro}}</td>
+                <td class="ocultar">{{item.fechaRes | date:'medium'}}</td>
+                <td>{{item.fechaEnt |date:'medium'}}</td>
+                <td class="ocultar">{{item.estado}}</td>
+            </tr>
+        </tbody>
+    </table><br>
 </section>

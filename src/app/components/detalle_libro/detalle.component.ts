@@ -19,7 +19,6 @@ export class DetalleComponent implements OnInit {
     ngOnInit() {
         this.libro=this._libro.getLibroAct();
         this.obtenerExis();
-        // alert(this.libro.ide+"   tipo: "+typeof(this.libro.ide.toString()));
     }
 
     obtenerExis(){
