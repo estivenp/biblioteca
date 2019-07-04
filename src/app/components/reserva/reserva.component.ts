@@ -27,6 +27,7 @@ export class ReservaComponent implements OnInit {
         this._libro.setPagina(2);
     }
 
+    // metodo para generar la reserva
     reservar() {
         if (confirm("¿Esta seguro que de reservar el libro?")) {
             this._reserva.agregarReserva(this.reserva);
