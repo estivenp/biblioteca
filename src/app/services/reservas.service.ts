@@ -15,9 +15,7 @@ import { Reserva } from '../models/reserva';
     constructor(/*private _http:Http,*/private _http:HttpClient) { 
       //this.url="https://api.myjson.com/bins/11pcld";
       //this.pagina=1;
-      var res=new Reserva("Tania Cañizares","It","0",new Date(),new Date(),3234567,"Prestado");
       this.reservas=[];
-      this.reservas.push(res);
     }
   
     // getLibro(){

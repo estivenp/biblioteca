@@ -4,6 +4,8 @@ import { Libro } from '../../models/libro';
 import { Reserva } from '../../models/reserva';
 import { LibroService } from '../../services/libros.service';
 import { ReservaService } from '../../services/reservas.service';
+import { Usuario } from 'src/app/models/usuario';
+
 
 @Component({
     selector: 'app-reserva',
@@ -15,26 +17,31 @@ export class ReservaComponent implements OnInit {
 
     libro: Libro;
     reserva: Reserva;
+    usuario: Usuario;
 
     constructor(private _libro: LibroService, private _reserva: ReservaService) { }
 
     ngOnInit() {
         this.libro = this._libro.getLibroAct();
-        this.reserva = new Reserva("", this.libro.titulo, this.libro.ide, new Date(), new Date(), 0, "Reservado");
+        this.reserva = new Reserva('', this.libro.titulo, this.libro.ide, new Date(), new Date(), 0, 'Reservado');
+        this.usuario = new Usuario('Tania Cañizares', 'ctania@unicauca.edu.co', null, null);
     }
 
     volver() {
         this._libro.setPagina(2);
     }
 
-    // metodo para generar la reserva
+    getNombre() {
+        return this.usuario.nombre;
+    }
+
     reservar() {
-        if (confirm("¿Esta seguro que de reservar el libro?")) {
+        if (confirm('¿Esta seguro que de reservar el libro?')) {
             this._reserva.agregarReserva(this.reserva);
-            var aux = this._libro.getExistentes();
+            const aux = this._libro.getExistentes();
             aux[parseInt(this.libro.ide.toString())] = aux[parseInt(this.libro.ide.toString())] - 1;
             this._libro.setExistentes(aux);
-            alert("La reserva ha sido registrada");
+            alert('La reserva ha sido registrada');
             this._libro.setPagina(1);
         }
     }

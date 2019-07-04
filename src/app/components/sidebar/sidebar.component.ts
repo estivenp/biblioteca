@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-sidebar',
@@ -16,7 +15,7 @@ export class SidebarComponent implements OnInit {
 
     @Output() collapsedEvent = new EventEmitter<boolean>();
 
-    constructor(private translate: TranslateService, public router: Router) {
+    constructor(public router: Router) {
         this.nombre="Tania Cañizares";
         this.router.events.subscribe(val => {
             if (
@@ -66,10 +65,6 @@ export class SidebarComponent implements OnInit {
     rltAndLtr() {
         const dom: any = document.querySelector('body');
         dom.classList.toggle('rtl');
-    }
-
-    changeLang(language: string) {
-        this.translate.use(language);
     }
 
     onLoggedout() {

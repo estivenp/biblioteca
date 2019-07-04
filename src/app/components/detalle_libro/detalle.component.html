@@ -1,22 +1,22 @@
-<button class="btn btn-secondary my-2 my-sm-0" (click)="volver()"> Volver </button>
+<button class="btn btn-dark" (click)="volver()"> Volver </button>
 <div class="row">
     <div class="col-xl-4">
         <br>
         <img [src]=libro.imagen alt="" id="imagen">
         <hr>
-        <pre><strong>Titulo</strong>                   <i>{{libro.titulo}}</i></pre>
-        <pre><strong>Autor</strong>                    <i>{{libro.autor}}</i></pre>
-        <pre><strong>Genero</strong>                 <i>{{libro.genero}}</i></pre>
-        <pre><strong># Edicion</strong>              <i>{{libro.edicion}}</i></pre>
-        <pre><strong>Unidades Existentes</strong>    <i>{{libro.uni_existente}}</i></pre>
-        <pre><strong>Unidades Disponibles</strong>    <i>{{exist}}</i></pre>
+        <pre><strong>Titulo</strong>                               <i>{{libro.titulo}}</i></pre>
+        <pre><strong>Autor</strong>                                <i>{{libro.autor}}</i></pre>
+        <pre><strong>Genero</strong>                             <i>{{libro.genero}}</i></pre>
+        <pre><strong># Edicion</strong>                          <i>{{libro.edicion}}</i></pre>
+        <pre><strong>Unidades Existentes</strong>     <i>{{libro.uni_existente}}</i></pre>
+        <pre><strong>Unidades Disponibles</strong>  <i>{{exist}}</i></pre>
     </div>
 
-    <div class="col-xl-8 text-center">
+    <div class="col-xl-7 text-center">
         <br>
         <h1 id="resenia">Reseña</h1>
         <hr>
-        <p id="descripcion">{{libro.descipcion}}</p><br><br>
+        <p id="descripcion" class="text-justify">{{libro.descipcion}}</p><br><br>
         <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="reserva()"
         [disabled]="exist==0">Reservar</button>
     </div>

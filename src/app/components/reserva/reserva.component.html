@@ -1,2 +1,68 @@
-<button class="btn btn-secondary my-2 my-sm-0" (click)="volver()"> Volver </button>
-<p>Formulario</p>
+<button class="btn btn-dark" (click)="volver()">Volver</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br />
+            <h1>Reservar: <br><i>{{ libro.titulo }}</i></h1>
+            <br />
+            <form name="form" (ngSubmit)="reservar()" #f="ngForm" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="usuario.nombre" disabled />
+                </div>
+                <div class="form-group">
+                    <label for="correo">Email</label>
+                    <input type="text" class="form-control" name="correo" [(ngModel)]="usuario.correo" disabled />
+                </div>
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        name="codigo"
+                        [(ngModel)]="usuario.codigo"
+                        #codigo="ngModel"
+                        required
+                        minlength="10"
+                    />
+                    <div *ngIf="codigo.invalid && (codigo.dirty || codigo.touched)" class="alert alert-danger">
+                        <div *ngIf="codigo.errors.required">
+                            Código requerido
+                        </div>
+                        <div *ngIf="codigo.errors.minlength">
+                            El código debería tener minímo 10 digitos
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        name="telefono"
+                        [(ngModel)]="usuario.telefono"
+                        #telefono="ngModel"
+                        required
+                        minlength="10"
+                    />
+                    <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+                        <div *ngIf="telefono.errors.required">Teléfono requerido {{ telefono.errors.minlength }}</div>
+                        <div *ngIf="telefono.errors.minlength">
+                            El teléfono debería tener 10 digitos
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-9">
+                        <button class="btn btn-secondary my-2 my-sm-0" (click)="volver()">Cancelar</button>
+                    </div>
+                    <div class="col-lg-1">
+                        <input *ngIf="f.invalid" type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Reservar" disabled />
+                        <input *ngIf="!f.invalid" type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Reservar" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
