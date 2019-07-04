@@ -18,6 +18,8 @@ export class ReservaComponent implements OnInit {
     libro: Libro;
     reserva: Reserva;
     usuario: Usuario;
+    fechaMin:Date;
+    fechaMax:Date;
 
     constructor(private _libro: LibroService, private _reserva: ReservaService) { }
 
@@ -25,6 +27,10 @@ export class ReservaComponent implements OnInit {
         this.libro = this._libro.getLibroAct();
         this.reserva = new Reserva('', this.libro.titulo, this.libro.ide, new Date(), new Date(), 0, 'Reservado');
         this.usuario = new Usuario('Tania Cañizares', 'ctania@unicauca.edu.co', null, null);
+        this.fechaMin=new Date();
+        this.fechaMax = new Date();
+        this.fechaMax.setDate(this.fechaMax.getDate()+7);
+        this.reserva.fechaEnt.setDate(this.reserva.fechaEnt.getDate()+1);
     }
 
     volver() {
